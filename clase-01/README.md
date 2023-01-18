@@ -2,7 +2,6 @@
 
 ## Clase 01
 
-
 ## Areas en GIT
 
 * Working Directory (WD): Es el area de trabajo
@@ -38,3 +37,19 @@ git init
 * Unmodified: Archivos conocidos por el repo, pero que no sufrieron cambios desde el último commit
 * Modified: Archivos conocidos por el repo, y  a su vez, fueron modificados
 * Staged: Archivos cuyos cambios fueron confirmados por nosotros
+
+## Agregar a la zona de confirmacion (Staging Area o Index)
+
+```sh
+git add <nombre-archivo>
+git add clase01/README.md
+git add .gitignore
+git add index.html
+git add . # Es comodin que nos permite agregar todo.
+```
+
+## Para sacar una 'foto' de nuestros archivos (Hacer un commit)
+```sh
+git commit # Abre un editor para escribir el mensaje
+git commit -m "Mensaje del contenido del commit"
+```
