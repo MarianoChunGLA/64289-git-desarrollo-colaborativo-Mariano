@@ -124,4 +124,71 @@ git add <archivo-o-archivos>
 
 ```sh
 git commit --amend
+```
+
+## Tags (etiquetas)
+Me permite etiquetar commits
+Se suele usar para tagear versiones
+
+## Listar todos los tags
+
+```sh
+git tag
 ``` 
+
+## Crear un tag
+
+```sh
+git tag <nombre-de-tag> <HASH>
+git tag ultimo-commit db3538a
+## Version anotada. 
+git tag -a v1.0.0 <HASH> -m "<mensaje informativo>"
+git tag -a v1.0.0 495e2db -m "Version 1.0.0 - Comenzamos con la clase 03 donde vimos fetch, stash, amend y tags"
+```
+
+## Mostrar informaicón detallada de un tag
+
+```sh
+git show v0.1.0
+```
+
+## Subir un tag en particular
+
+```sh
+git push origin <nombre-tag>
+```
+
+## NO ES BUENA PRACTICA: Subir todos los tag
+
+```sh
+git push --tags
+```
+
+## Mostrar el log desde un tag para atrás
+
+```sh
+git log v0.1.0 --oneline
+```
+
+# ALIAS
+
+## Crear un alias
+
+```sh
+git config --global alias.ll "log --oneline --decorate --all --graph"
+git config --global alias.s "status"
+git config --global alias.c "commit -m"
+git config --global alias.l log --oneline
+```
+
+## Listar los alias
+
+```sh
+git config --get-regexp alias
+```
+
+## Quitar alias
+
+```sh
+git config --global --unset alias.l
+```
